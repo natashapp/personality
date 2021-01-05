@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{test.name}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div style="padding: 40px">
+        <h3>
+            #{{question.id}} {{question.name}}
+        </h3>
+        <hr>
+        <hr>
+          <form>
+            <div>
+               <form>
+                    <ion-radio-group   #questionRef (ionChange)="userAnswer()">
+                        <ion-item *ngFor="let answer of question.answers; index as i; first as isFirst">
+                            <ion-radio slot="start" value="{{answer.id}}"></ion-radio>
+                            <ion-label>{{answer.name}}</ion-label>
+                        </ion-item>
+                    </ion-radio-group>
+               </form>
+            </div>
+            <hr>
+            <ion-button color="primary"   [disabled]="disabledBack" (click)="previousQuestion()">Back</ion-button>
+            <ion-button color="primary" [disabled]="disabledForward" (click)="nextQuestion()" >Next</ion-button>
+          </form>
+    </div>
+</ion-content>

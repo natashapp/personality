@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Start Test</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div style="padding: 40px">
+        <h3>
+            {{test.name}}
+        </h3>
+        <hr>
+        <hr>
+        <div>
+            {{test.description}}
+        </div>
+        <hr>
+        <div [innerHTML]="test.intro">
+        </div>
+        <hr>
+        <ion-button color="primary" (click)="startQuestions()">Start test</ion-button>
+    </div>
+</ion-content>
