@@ -18,18 +18,15 @@ export class ResultsService {
         this.results.set(testId, testResults);
     }
 
-    getTestResult(testId: string) {
-        return this.results.has(testId);
+    getTestResult(testId: string): Map<string, string> {
+        if (this.results.has(testId)) {
+            return this.results.get(testId)
+        } else {
+            return new Map<string, string>();
+        }
     }
 
-    addResultForQuestion(testId: string, questionId: string, answerId: string) {
-        let testResults = this.results.get(testId);
-        if (testResults == null) {
-            testResults = new Map<string, string>();
-            this.results.set(testId, testResults);
-        }
-        testResults.set(questionId, answerId);
-    }
+
 
     clearResult(testId: string) {
         this.results.delete(testId);

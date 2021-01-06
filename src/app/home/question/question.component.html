@@ -16,7 +16,7 @@
           <form>
             <div>
                <form>
-                    <ion-radio-group   #questionRef (ionChange)="userAnswer()">
+                    <ion-radio-group  #questionRef (ionChange)="setUserAnswer()" [value]="value">
                         <ion-item *ngFor="let answer of question.answers; index as i; first as isFirst">
                             <ion-radio slot="start" value="{{answer.id}}"></ion-radio>
                             <ion-label>{{answer.name}}</ion-label>
@@ -25,8 +25,8 @@
                </form>
             </div>
             <hr>
-            <ion-button color="primary"   [disabled]="disabledBack" (click)="previousQuestion()">Back</ion-button>
-            <ion-button color="primary" [disabled]="disabledForward" (click)="nextQuestion()" >Next</ion-button>
+            <ion-button color="primary"   [disabled]="disabledBack()" (click)="previousQuestion()">Back</ion-button>
+            <ion-button color="primary" [disabled]="disabledForward()" (click)="nextQuestion()" >Next</ion-button>
           </form>
     </div>
 </ion-content>
