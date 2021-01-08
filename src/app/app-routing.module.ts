@@ -7,6 +7,7 @@ import {UserAccount1Component} from "./user-account1/user-account1.component";
 import {Compare1Component} from "./compare1/compare1.component";
 import {Notification1Component} from "./notification1/notification1.component";
 import {ResultsComponent} from "./home/results/results.component";
+import {CommonModule} from "@angular/common";
 
 const routes: Routes = [
     {
@@ -40,6 +41,10 @@ const routes: Routes = [
         component: QuestionComponent
     },
     {
+        path: "test/:id/questions1",
+        component: QuestionComponent
+    },
+    {
         path: "test/:id/result",
         component: ResultsComponent
     },
@@ -47,7 +52,8 @@ const routes: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})
+        RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules}),
+        CommonModule
     ],
     exports: [RouterModule]
 })

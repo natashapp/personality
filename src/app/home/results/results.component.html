@@ -11,8 +11,15 @@
         <h3>
             Results
         </h3>
-        <hr>
-        <hr>
-
+        <ion-list *ngFor="let r of resultList; index as i; first as isFirst">
+            <ion-card >
+                <ion-card-header>
+                    {{r.questionId}}. {{r.meaning}}
+                </ion-card-header>
+                <ion-card-content>
+                    {{r.answerId}}. {{r.answers}}
+                </ion-card-content>
+            </ion-card>
+        </ion-list>
     </div>
 </ion-content>

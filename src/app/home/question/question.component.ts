@@ -23,7 +23,7 @@ export class QuestionComponent implements OnInit {
 
     @ViewChild('questionRef') questionRef: IonRadioGroup;
 
-    constructor(private  testService: TestsService,private resultService: ResultsService,
+    constructor(private  testService: TestsService, private resultService: ResultsService,
                 private route: ActivatedRoute, private router: Router) {
     }
 
@@ -62,7 +62,7 @@ export class QuestionComponent implements OnInit {
     }
 
     log(msg) {
-        if(true)
+        if (true)
             console.log(msg);
     }
 
@@ -71,14 +71,14 @@ export class QuestionComponent implements OnInit {
 
         if (this.canGoForward) {
             let nextQuestion: Question = this.testService.getNextQuestion(this.test, this.question);
-            if (nextQuestion != null) {
-
+            if (nextQuestion != null ) {
                 this.question = nextQuestion;
                 this.value = this.testResults[this.question.id] != undefined ? this.testResults[this.question.id] : ""
             } else if (this.testService.isLastQuestion(this.test, this.question)) {
+                this.resultService.addTestResponse(this.test.id, this.testResults);
                 this.router.navigate(['/test/' + this.test.id + '/result']);
             } else { // some kind of problem navigate home
-                this.router.navigate(['']);
+                this.router.navigate(['/5001']);
             }
         }
     }
@@ -88,13 +88,13 @@ export class QuestionComponent implements OnInit {
 
         let previousQuestion: Question = this.testService.getPreviousQuestion(this.test, this.question);
 
-        if (previousQuestion != null) {
+        if (previousQuestion != null && parseInt(this.question.id, 10) < 3) {
             this.question = previousQuestion;
             this.value = this.testResults[this.question.id]
         } else if (this.testService.isFirstQuestion(this.test, this.question)) {
             this.router.navigate(['/test/' + this.test.id + '/start']);
         } else { // some kind of problem navigate home
-            this.router.navigate(['']);
+            this.router.navigate(['/test/' + this.test.id + '/question1']);
         }
     }
 }
