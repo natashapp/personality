@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {StartTestComponent} from "./home/start-test/start-test.component";
 import {QuestionComponent} from "./home/question/question.component";
-import {Home1Component} from "./home1/home1.component";
 import {UserAccount1Component} from "./user-account1/user-account1.component";
 import {Compare1Component} from "./compare1/compare1.component";
 import {Notification1Component} from "./notification1/notification1.component";

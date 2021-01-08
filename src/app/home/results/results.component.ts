@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Test} from "../../services/test.definition";
+import {Test, TestType} from "../../services/test.definition";
 import {TestsService} from "../../services/tests.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {ResultsService} from "../../services/results.service";
@@ -25,16 +25,53 @@ export class ResultsComponent implements OnInit {
         this.test = this.testService.getTestById(selectedTestId);
         const testResults = this.resultService.getTestResult(selectedTestId);
 
-        this.test.questions
-            .forEach(
-                q=>{q.answers.forEach(
-                    a=>{if(a.id==testResults[q.id])
-                        this.resultList.push(
-                            new TestResult(q.id,q.means, a.text, a.id ));})})
+        switch (this.test.type) {
+            case TestType.Combination:
+                this.resultList = this.resultsCombination(testResults);
+                break;
+            case TestType.ColorTest:
+                break;
+            case TestType.Default:
+                this.resultList = this.resultDefault(testResults);
+                break;
+        }
 
-        this.resultList.forEach(item=>this.log(item))
+        this.resultList.forEach(item => this.log(item))
     }
 
+    resultsCombination(testResults: Map<string, string>): TestResult[] {
+        const results: TestResult[] = []
+        let res = "";
+
+        for (let q of this.test.questions) {
+            console.log("q=" + testResults[q.id])
+        }
+
+        res = "";
+        this.test.questions.forEach(q => res += testResults[q.id]);
+
+        this.test.results.forEach(r => {
+            if (r.value == res) {
+                results.push(new TestResult(res, "", r.text, r.value));
+            }
+        })
+        return results;
+    }
+
+    resultDefault(testResults: Map<string, string>): TestResult[] {
+        const results: TestResult[] = []
+        this.test.questions
+            .forEach(
+                q => {
+                    q.answers.forEach(
+                        a => {
+                            if (a.id == testResults[q.id])
+                                results.push(
+                                    new TestResult(q.id, q.means, a.text, a.id));
+                        })
+                })
+        return results;
+    }
 
     log(msg) {
         console.log(msg);
@@ -47,7 +84,7 @@ class TestResult {
     answers: string;
     answerId: string;
 
-    constructor(questionId: string, meaning: string, answer: string, answerId:string) {
+    constructor(questionId: string, meaning: string, answer: string, answerId: string) {
         this.questionId = questionId;
         this.answers = answer;
         this.meaning = meaning;
