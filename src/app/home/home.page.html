@@ -8,20 +8,21 @@
 </ion-header>
 
 <ion-content>
-    <ion-grid>
-        <ion-row *ngFor="let test of tests">
-            <ion-col size="9">
-             <div style="height: 50px">
-                {{test.name}}
-             </div>
-            </ion-col>
-            <ion-col >
+    <ion-list *ngFor="let test of tests">
+
+            <ion-item href="/test/{{test.id}}/start" class="ion-activated">
+                <ion-icon name="wifi" slot="start"></ion-icon>
+                <ion-label>  {{test.name}}</ion-label>
+            </ion-item>
+
+
+
+             <!--   {{test.id}}.  {{test.description}}
                 <ion-fab  >
                     <ion-fab-button>
                         <ion-icon name="play" routerLink="/test/{{test.id}}/start"></ion-icon>
                     </ion-fab-button>
                 </ion-fab>
-            </ion-col>
-        </ion-row>
-    </ion-grid>
+-->
+    </ion-list>
 </ion-content>

@@ -30,6 +30,7 @@ export class ResultsComponent implements OnInit {
                 this.resultList = this.resultsCombination(testResults);
                 break;
             case TestType.ColorTest:
+                console.error("Should not be here !!!, will see")
                 break;
             case TestType.Default:
                 this.resultList = this.resultDefault(testResults);

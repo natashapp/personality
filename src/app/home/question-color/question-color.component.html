@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>{{test.name}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div style="padding: 40px" *ngIf="gridVisible()">
+        <h3>
+            {{question.name}}
+        </h3>
+        <ion-grid>
+            <ion-row *ngFor="let row of colorRows;">
+                <ion-col>
+                    <div style="width: 100px;height: 100px;"
+                         [style.background-color]="row.item1.bgColor"
+                         [style.visibility]="row.item1.visible"
+                         (click)="selectColor(row.item1.id);row.item1.select()">
+                        {{row.item1.name}}
+                        {{row.item1.id}}
+                    </div>
+                </ion-col>
+                <ion-col>
+                    <div style="width: 100px;height: 100px; "
+                         [style.background-color]="row.item2.bgColor"
+                         [style.visibility]="row.item2.visible"
+                         (click)="selectColor(row.item2.id);row.item2.select()" >
+                        {{row.item2.name}}
+                        {{row.item2.id}}
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <div *ngIf="timeVisible()">
+        <div #timerRef>60</div>
+        <ion-button color="primary" [disabled]="disabledForward()" (click)="nextQuestion()">Next</ion-button>
+    </div>
+
+</ion-content>

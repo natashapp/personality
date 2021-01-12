@@ -7,6 +7,8 @@ import {Compare1Component} from "./compare1/compare1.component";
 import {Notification1Component} from "./notification1/notification1.component";
 import {ResultsComponent} from "./home/results/results.component";
 import {CommonModule} from "@angular/common";
+import {QuestionColorComponent} from "./home/question-color/question-color.component";
+import {ResultsColorComponent} from "./home/results-color/results-color.component";
 
 const routes: Routes = [
     {
@@ -40,8 +42,12 @@ const routes: Routes = [
         component: QuestionComponent
     },
     {
-        path: "test/:id/questions1",
-        component: QuestionComponent
+        path: "test/:id/questions-color",
+        component: QuestionColorComponent
+    },
+    {
+        path: "test/:id/results-color",
+        component: ResultsColorComponent
     },
     {
         path: "test/:id/result",

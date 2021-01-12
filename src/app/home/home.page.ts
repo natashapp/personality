@@ -16,7 +16,7 @@ export class HomePage implements OnInit {
     }
 
     ngOnInit() {
-        this.tests = this.testService.getTests()
+        this.tests = this.testService.getTests();
     }
 
 }

@@ -6,6 +6,8 @@ import {HomePageRoutingModule} from './home-routing.module';
 import {HomePage} from './home.page';
 import {QuestionComponent} from "./question/question.component";
 import {ResultsComponent} from "./results/results.component";
+import {QuestionColorComponent} from "./question-color/question-color.component";
+import {ResultsColorComponent} from "./results-color/results-color.component";
 
 
 @NgModule({
@@ -15,7 +17,7 @@ import {ResultsComponent} from "./results/results.component";
         IonicModule,
         HomePageRoutingModule,
     ],
-    declarations: [HomePage,QuestionComponent, ResultsComponent]
+    declarations: [HomePage,QuestionComponent, ResultsComponent,QuestionColorComponent,ResultsColorComponent]
 })
 export class HomePageModule {
 }

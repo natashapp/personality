@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TestsService} from "../../services/tests.service";
-import {Test} from "../../services/test.definition";
-import {ActivatedRoute,Router} from "@angular/router";
+import {Test, TestType} from "../../services/test.definition";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
     selector: 'app-start-test',
@@ -13,7 +13,7 @@ export class StartTestComponent implements OnInit {
     public test: Test;
 
     constructor(private  testService: TestsService,
-                private route: ActivatedRoute, private router :Router) {
+                private route: ActivatedRoute, private router: Router) {
     }
 
     ngOnInit() {
@@ -23,6 +23,9 @@ export class StartTestComponent implements OnInit {
     }
 
     startQuestions() {
-        this.router.navigate(['/test/'+this.test.id+'/questions'])
+        if (this.test.type == TestType.ColorTest)
+            this.router.navigate(['/test/' + this.test.id + '/questions-color'])
+        else
+            this.router.navigate(['/test/' + this.test.id + '/questions'])
     }
 }
