@@ -14,7 +14,8 @@ export type Test = {
     free: boolean,
     footerIndicator: boolean,
     questions: Question[],
-    results: Result[]
+    results: Result[],
+    version:string
 }
 
 export type Question = {

@@ -13,6 +13,7 @@ const vaseTest: Test = {
         "Once the image of a <b>vase</b> is clear, you can start the test.",
     "description": "What kind of partner do you prefer?",
     "_productId": undefined,
+    "version":"1.0",
     "questions": [{
         "id": "1",
         "name": "How many flowers does the vase have?",

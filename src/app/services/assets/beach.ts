@@ -12,7 +12,7 @@ const beachTest: Test = {
     "description": "People relations",
     "free": false,
     "footerIndicator": true,
-
+    "version":"1.0",
     "questions": [{
         "id": "1",
         "message":undefined,

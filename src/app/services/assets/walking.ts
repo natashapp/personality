@@ -12,6 +12,7 @@ const walkingTest: Test = {
     "type": TestType.Default,
     "intro": "You need to go to your boyfrend/girlfrend house. ",
     "description": "Dealing with the relationship",
+    "version":"1.0",
     "questions": [{
         "id": "1",
         "name": "You are walking to your boyfriend's/girlfriend's house. There are two roads to get there. One is a straight path which takes you there quickly, but it is very plain and boring. The other is curvy and full of wonderful sights on the way, but takes quite a while to reach your loved one's house. Which path do you choose?",

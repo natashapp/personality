@@ -14,6 +14,7 @@ const knifeTest: Test = {
         "<p>Once the image of knife becomes clear you are ready to start the test</p>",
     "free": false,
     "description": "Sex Life",
+    "version":"1.0",
     "questions": [{
         "id": "1",
         "name": "What kind of knife is it?",

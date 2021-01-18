@@ -16,6 +16,7 @@ const drivingTest: Test =
             "familiar with the city, so she/he is giving you instructions  were to turn." +
             "<p> After a while it turns out you are <b>lost.</b></p>",
         "description": "Type of relationship with your partner",
+        "version":"1.0",
         "_productId": undefined,
         "questions": [{
             "id": "1",

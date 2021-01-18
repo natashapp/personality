@@ -14,6 +14,7 @@ const waterTest: Test = {
         " <p> Once image of <b>water</b> is clear, you are ready to start the test  ...</p>",
     "description": "Your love life",
     "_productId": undefined,
+    "version":"1.0",
     "questions": [{
         "id": "1",
         "name": "What do you see?",

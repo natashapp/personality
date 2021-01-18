@@ -14,6 +14,7 @@ const roomTest: Test = {
         "<p> Take a moment to imagine  the room as best as you can. </p>" +
         "<p> Once the image of the room is in you mind - you are ready to start the test.</p>",
     "description": "Your view on your childhood",
+    "version":"1.0",
     "questions": [{
         "id": "1",
         "name": "What are your general feelings about the room?",
