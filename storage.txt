@@ -1,0 +1,18 @@
+inside test there will be a property version
+We will save all tests here
+test10={}
+test11={}
+..
+
+testStatistic10
+
+testVersions = {}
+we can have one separate key value that will contain all test version
+
+test10results={1:2,2:1}
+test11results= question selected answer
+
+We will have to think about friend and similar
+
+User info will probably be saved
+

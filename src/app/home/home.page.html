@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-    <ion-list *ngFor="let test of tests">
+    <!--<ion-list *ngFor="let test of tests">
 
             <ion-item href="/test/{{test.id}}/start" class="ion-activated">
                 <ion-icon name="wifi" slot="start"></ion-icon>
@@ -16,13 +16,18 @@
             </ion-item>
 
 
+    </ion-list>-->
 
-             <!--   {{test.id}}.  {{test.description}}
-                <ion-fab  >
-                    <ion-fab-button>
-                        <ion-icon name="play" routerLink="/test/{{test.id}}/start"></ion-icon>
-                    </ion-fab-button>
-                </ion-fab>
--->
+    <ion-button (click)="triggerTestRefresh()">Trigger Refresh</ion-button>
+    <ion-item>
+        <ion-label>
+            insert key:value
+        </ion-label>
+
+        <ion-input id="keyvalue"></ion-input>
+        <ion-button (click)="addItem()" >Add</ion-button>
+    </ion-item>
+    <ion-list *ngFor="let key of keys">
+        <ion-item>{{key}}</ion-item>
     </ion-list>
 </ion-content>

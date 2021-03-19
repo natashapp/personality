@@ -20,4 +20,6 @@ import {ResultsColorComponent} from "./results-color/results-color.component";
     declarations: [HomePage,QuestionComponent, ResultsComponent,QuestionColorComponent,ResultsColorComponent]
 })
 export class HomePageModule {
+
+
 }

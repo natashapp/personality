@@ -15,7 +15,7 @@ export type Test = {
     footerIndicator: boolean,
     questions: Question[],
     results: Result[],
-    version:string
+    version:number
 }
 
 export type Question = {
@@ -35,4 +35,10 @@ export type Answer = {
 export type Result = {
     value: string,
     text: string
+}
+export type TestShort = {
+    id: string,
+    name: string,
+    version:number
+
 }
