@@ -16,7 +16,7 @@ const stateOfMindTest: Test = {
     "free": true,
     "_productId": undefined,
     "footerIndicator": false,
-    "version":"1.0",
+    "version":1.0,
     "questions": [
         {
             "id": "1",

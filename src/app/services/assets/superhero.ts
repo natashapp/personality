@@ -13,7 +13,7 @@ const superheroTest: Test = {
     "type": TestType.Default,
     "intro": "Quick and fun test.<p> All you have to do is choose a super hero power that you will most like to posses. </p>",
     "description": "Fun things about yourself",
-    "version":"1.0",
+    "version":1.0,
     "questions": [{
         "id": "1",
         "name": "If you have to choose one which one would it be?",

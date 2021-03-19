@@ -13,7 +13,7 @@ const forestTest: Test = {
   "intro" : "Clear you mind and spend a minute to imagine <b>forest</b>. <p> Once image of <b>forest</b> is clear, you are ready to start the test  ...",
   "description" : "Your views on life",
   "_productId":undefined,
-  "version":"1.0",
+  "version":1.0,
   "questions" : [ {
     "id" : "1",
     "name" : "Do you feel pleasant in the forest?",

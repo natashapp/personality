@@ -12,7 +12,7 @@ const knowYourselfTest: Test = {
     "type": TestType.Default,
     "intro": "This test will take you on a imaginative trip,  clear your mind and ...",
     "description": "Your views on life",
-    "version":"1.0",
+    "version":1.0,
     "questions": [{
         "id": "1",
         "name": "Imagine that you are walking along a path. What do you see around you?",

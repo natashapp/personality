@@ -12,7 +12,7 @@ var test ={
     "type": TestType.Points,
     "intro": "As a KID I was ... <br> Please answer the following question",
     "descriptions": "what color are you",
-    "version":"1.0",
+    "version":1.0,
     "question": [
         {
             "id": 1,

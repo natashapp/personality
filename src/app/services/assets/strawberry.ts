@@ -16,7 +16,7 @@ const strawberryTest: Test = {
     "extraDescription": "how do you react to it, are you always trying to be good - or are you the type of person who knows that sometimes just feels good to be bad. ",
     "footerIndicator": true,
     "_productId": undefined,
-    "version":"1.0",
+    "version":1.0,
     "questions": [
         {
             "id": "1",

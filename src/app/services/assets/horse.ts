@@ -13,7 +13,7 @@ const horseTest: Test = {
     "intro": "Clear you mind and imagine a <b>horse</b>. " +
         "<p>Once the  image of the <b>horse</b> becomes somewat clear you are ready to start the test.</p>",
     "description": "Your view on your current relationship",
-    "version":"1.0",
+    "version":1.0,
     "questions": [{
         "id": "1",
         "name": "What color is the horse?",
