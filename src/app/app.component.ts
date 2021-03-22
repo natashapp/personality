@@ -4,6 +4,8 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import {FcmService} from "./services/fcm.service";
+import { Plugins } from '@capacitor/core';
+const { AdMob } = Plugins;
 
 
 @Component({
@@ -44,6 +46,7 @@ export class AppComponent implements OnInit {
     private fcmService: FcmService
   ) {
     this.initializeApp();
+    AdMob.initialize();
   }
 
   initializeApp() {

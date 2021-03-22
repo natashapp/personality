@@ -50,3 +50,16 @@ diffrent on every instalation  d2KIle4lhkFjmkzMonnBs3:APA91bHXAZVwO7zmITLyC7SXhm
 build and sync with npx
 ionic build
 npx cap sync
+
+add mobs
+google.com, pub-1935322587860934, DIRECT, f08c47fec0942fa0
+
+Complete the instructions in the Google Mobile Ads SDK guide using this app ID:
+Personality Test sca-app-pub-1935322587860934~6750485226
+Follow the rewarded implementation guide to integrate the SDK. You'll specify ad type and placement when you integrate the code using this ad unit ID:
+SingleRewardca-app-pub-1935322587860934/3751419815
+Review the AdMob policies to ensure your implementation complies.
+
+
+npm install --save @capacitor-community/admob
+npx cap update //updates ios pods
