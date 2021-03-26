@@ -14,14 +14,17 @@ const { AdMob } = Plugins;
 export class HomePage implements OnInit {
     options: AdOptions = {
         adId: 'ca-app-pub-1935322587860934/3751419815',//https://apps.admob.com/v2/apps/6750485226/adunits/3751419815/edit?_ga=2.186510697.1944902220.1616321729-1171530511.1616196693&_gac=1.81178725.1616321729.Cj0KCQjw3duCBhCAARIsAJeFyPWlxbv-hXpQiaF6FVyyndOJ_zl5xMCm92-RBWavadqQ8IeOMltZ66UaAhQGEALw_wcB
-        adSize:AdSize.FLUID,
-        position:AdPosition.CENTER
+       //adId:'ca-app-pub-3940256099942544/5224354917',
+        isTesting: true
     };
+
+
 
     public tests: Test[];
     public keys: string[];
 
     constructor(private  testService: TestsService, private storageService: StorageService) {
+
         // Prepare ReWardVideo
         AdMob.prepareRewardVideoAd(this.options);
 
@@ -29,7 +32,9 @@ export class HomePage implements OnInit {
         AdMob.addListener('onRewardedVideoAdLoaded', (info: boolean) => {
             // You can call showRewardVideoAd() here or anytime you want.
             console.log('RewardedVideoAd Loaded');
+            AdMob.showRewardVideoAd();
         });
+
 
         AdMob.addListener( 'onRewardedVideoAdOpened', (info: any) => {
             console.log("onRewardedVideoAdOpened" + info);
