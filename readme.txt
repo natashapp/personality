@@ -63,3 +63,19 @@ Review the AdMob policies to ensure your implementation complies.
 
 npm install --save @capacitor-community/admob
 npx cap update //updates ios pods
+
+Firebase Auth
+npm install cordova-plugin-firebase-authentication
+npm install @ionic-native/firebase-authentication
+ionic cap sync
+ -- build problem after this so I had to deinstal
+npm uninstall @ionic-native/firebase-authentication
+npm uninstall cordova-plugin-firebase-authentication
+ionic cap sync
+-- so it seems that I will have to go without firebase
+or I can try again but copy the project before
+
+try connect with apple
+npm install cordova-plugin-sign-in-with-apple
+npm install @ionic-native/sign-in-with-apple
+ionic cap sync
