@@ -6,7 +6,7 @@ import { Plugins } from '@capacitor/core';
 import {AdOptions, AdPosition, AdSize} from '@capacitor-community/admob';
 const { AdMob } = Plugins;
 import { SignInWithApple, AppleSignInResponse, AppleSignInErrorResponse, ASAuthorizationAppleIDRequest } from '@ionic-native/sign-in-with-apple/ngx';
-
+import { Facebook,FacebookLoginResponse } from '@ionic-native/facebook/ngx';
 
 @Component({
     selector: 'app-home',
@@ -26,10 +26,20 @@ export class HomePage implements OnInit {
     public keys: string[];
 
     constructor(private  testService: TestsService, private storageService: StorageService,
-                private signInWithApple: SignInWithApple) {
+                private signInWithApple: SignInWithApple,
+              private fb: Facebook
+    ) {
 
 
 
+    }
+
+    loginWithFacebook (){
+        // this.fb.getAccessToken();
+        this.fb.login(['public_profile', 'email'])
+            .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
+            .catch(e => console.log('Error logging into Facebook', e));
+        this.fb.logEvent(this.fb.EVENTS.EVENT_NAME_ADDED_TO_CART);
     }
 
     loginWithApple(){

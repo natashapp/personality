@@ -79,3 +79,14 @@ try connect with apple
 npm install cordova-plugin-sign-in-with-apple
 npm install @ionic-native/sign-in-with-apple
 ionic cap sync
+
+facebook (https://capacitorjs.com/docs/cordova/using-cordova-plugins)
+ionic cordova plugin add cordova-plugin-facebook-connect --variable APP_ID="224464747599602" --variable APP_NAME="Personality Tests"
+
+https://www.joshmorony.com/using-cordova-plugins-that-require-install-variables-with-capacitor/
+npm i cordova-plugin-facebook-connect
+
+npm install cordova-plugin-facebook-connect
+npm install @ionic-native/facebook
+ionic cap sync
+and add setting directly in info.plist

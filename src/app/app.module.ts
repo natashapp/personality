@@ -11,6 +11,8 @@ import {AppRoutingModule} from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { SignInWithApple } from "@ionic-native/sign-in-with-apple/ngx";
 
+import { Facebook } from '@ionic-native/facebook/ngx';
+
 @NgModule({
     declarations: [AppComponent],
     entryComponents: [],
@@ -24,6 +26,7 @@ import { SignInWithApple } from "@ionic-native/sign-in-with-apple/ngx";
         StatusBar,
         SplashScreen,
         SignInWithApple,
+        Facebook,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
     ],
     bootstrap: [AppComponent]

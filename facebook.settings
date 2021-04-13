@@ -1,0 +1,53 @@
+<key>FacebookAppID</key>
+<string>224464747599602</string>
+<key>FacebookDisplayName</key>
+<string>Personality Tests</string>
+<key>FacebookHybridAppEvents</key>
+<string>$FACEBOOK_HYBRID_APP_EVENTS</string>
+<key>FacebookUrlSchemeSuffix</key>
+<string>FACEBOOK_URL_SCHEME_SUFFIX_PLACEHOLDER</string>
+<key>FacebookAutoLogAppEventsEnabled_PLACEHOLDER</key>
+<string>FACEBOOK_AUTO_LOG_APP_EVENTS_PLACEHOLDER</string>
+<key>FacebookAdvertiserIDCollectionEnabled_PLACEHOLDER</key>
+<string>FACEBOOK_ADVERTISER_ID_COLLECTION_PLACEHOLDER</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>fbapi</string>
+    <string>fb-messenger-api</string>
+    <string>fbauth2</string>
+    <string>fbshareextension</string>
+</array>
+
+<key>NSExceptionDomains</key>
+<dict>
+  <key>facebook.com</key>
+  <key>fbcdn.net</key>
+  <key>akamaihd.net</key>
+  <dict>
+    <key>NSIncludesSubdomains</key>
+    <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+    <true/>
+    <false/>
+  </dict>
+  <dict>
+    <key>NSIncludesSubdomains</key>
+    <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+    <true/>
+    <false/>
+  </dict>
+  <dict>
+    <key>NSIncludesSubdomains</key>
+    <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+    <true/>
+    <false/>
+  </dict>
+</dict>
+in the existing NSAppTransportSecurity entry of your Info.plist to work
+
+<dict>
+ <key>CFBundleURLSchemes</key>
+ <array>
+   <string>fb$APP_IDFACEBOOK_URL_SCHEME_SUFFIX_PLACEHOLDER</string>
+ </array>
+</dict>
+in the existing CFBundleURLTypes entry of your Info.plist to work
