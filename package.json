@@ -22,6 +22,7 @@
     "@capacitor-community/admob": "^1.3.1",
     "@capacitor/core": "2.4.1",
     "@capacitor/ios": "^2.4.1",
+    "@codetrix-studio/capacitor-google-auth": "^2.1.3",
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/facebook": "^5.32.0",
     "@ionic-native/sign-in-with-apple": "^5.31.1",

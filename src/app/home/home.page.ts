@@ -5,6 +5,7 @@ import {StorageService} from "../services/storage.service";
 import { Plugins } from '@capacitor/core';
 import {AdOptions, AdPosition, AdSize} from '@capacitor-community/admob';
 const { AdMob } = Plugins;
+import '@codetrix-studio/capacitor-google-auth';
 import { SignInWithApple, AppleSignInResponse, AppleSignInErrorResponse, ASAuthorizationAppleIDRequest } from '@ionic-native/sign-in-with-apple/ngx';
 import { Facebook,FacebookLoginResponse } from '@ionic-native/facebook/ngx';
 
@@ -33,7 +34,11 @@ export class HomePage implements OnInit {
 
 
     }
-
+    async googleSignup() {
+        const googleUser = await Plugins.GoogleAuth.signIn() as any;
+        console.log('my user: ', googleUser);
+        console.log( googleUser);
+    }
     loginWithFacebook (){
         // this.fb.getAccessToken();
         this.fb.login(['public_profile', 'email'])

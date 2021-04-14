@@ -90,3 +90,12 @@ npm install cordova-plugin-facebook-connect
 npm install @ionic-native/facebook
 ionic cap sync
 and add setting directly in info.plist
+
+
+GOOGLE
+https://edigleyssonsilva.medium.com/adding-google-sign-in-to-your-ionic-3-4-5-app-8ed81744e8ba
+but it uses cordova
+
+https://devdactic.com/capacitor-google-sign-in/
+
+npm i @codetrix-studio/capacitor-google-auth
