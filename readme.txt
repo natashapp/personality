@@ -99,3 +99,22 @@ but it uses cordova
 https://devdactic.com/capacitor-google-sign-in/
 
 npm i @codetrix-studio/capacitor-google-auth
+
+
+have not used it
+npm install class-transformer reflect-metadata
+
+npm install cordova-plugin-uniquedeviceid
+npm install @ionic-native/unique-device-id
+ionic cap sync
+
+Link to capacitot options
+https://capacitorjs.com/docs/cli/copy
+ionic cap update
+
+
+
+
+  [warn] - Native: tried calling StatusBar.styleDefault, but the StatusBar plugin is not installed.
+⚡️  [warn] - Install the StatusBar plugin: 'ionic cordova plugin add cordova-plugin-statusbar'
+⚡️  [warn] - Native: tried calling SplashScreen.hide, but the SplashScreen plugin is not installed.

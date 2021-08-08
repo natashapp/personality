@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{test.name}}</ion-title>
+    <ion-buttons  slot="end" >
+      <ion-icon name="person-circle"  size="large" (click)="showSignIn()"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div style="padding: 40px">
+    <h3>
+      Results
+    </h3>
+    <ion-list *ngFor="let r of resultList;">
+      <ion-card >
+        <ion-card-header>
+          {{r.meaning}}
+        </ion-card-header>
+        <ion-card-content *ngFor="let answer of r.answers;">
+           {{answer}}
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-button color="primary" (click)="getResultsColorTest()"> Next </ion-button>
+  </div>
+</ion-content>

@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://localhost:8080/PersonalityWeb/",
-  apiServicesUrl: "http://localhost:8080/PersonalityWeb/rest/service/",
-  apiDownloadUrl: "http://localhost:8080/PersonalityWeb/tests/",
+  apiUrl: "http://192.168.1.186:8080/PersonalityWeb/",
+  apiServicesUrl: "http://192.168.1.186:8080/PersonalityWeb/rest/service/",
+  apiDownloadUrl: "http://192.168.1.186:8080/PersonalityWeb/tests/",
 };
 
 /*

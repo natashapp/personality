@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content style="padding: 20px">
+
+    <div style="margin: 20px" *ngIf="ifLogin3rdParty()">
+        <h2> Sign in</h2>
+        <ion-button expand="full" (click)="loginWithApple()">Login with apple</ion-button>
+        <ion-button expand="full" (click)="loginWithFacebook()">Facebook</ion-button>
+        <ion-button expand="full" (click)="googleSignup()">Signin Google</ion-button>
+    </div>
+
+    <div style="margin: 20px" *ngIf="ifChooseNickName()">
+        <h2>Last step</h2>
+        Please choose you Nick name
+        <ion-item>
+            <ion-label position="floating">Nick name</ion-label>
+            <ion-input style="border: 1px solid red" name="nickName" placeholder="enter your nick name" required minlength="4" [(ngModel)]="nickName"
+            ></ion-input>
+        </ion-item>
+        <br>
+      <!--  <div *ngIf="nickName. && (nickName.dirty || nickName.touched)"
+             class="alert">
+            <div *ngIf="nickName.errors?.required">
+                Name is required.
+            </div>
+            <div *ngIf="nickName.errors?.minLength">
+                Name must be at least 4 characters long.
+            </div>
+        </div>-->
+        <input type="button" value="Next" (click)="submitNickName()">
+    </div>
+
+
+
+    <div style="margin: 20px" *ngIf="ifDisplayUser()">
+        <h2>You are logged</h2>
+        <p>
+            Name : {{user.name}}
+            Nick Name : {{user.nickName}}
+            EMail:{{user.email}}
+            Logged as: {{user.lastSignInType}}
+            Logged: {{user.isLogged}}
+        </p>
+    </div>
+    <a routerLink="/">Home</a>
+
+</ion-content>

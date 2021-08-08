@@ -1,14 +1,17 @@
 import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
-import {StartTestComponent} from "./home/start-test/start-test.component";
-import {QuestionComponent} from "./home/question/question.component";
-import {UserAccount1Component} from "./user-account1/user-account1.component";
-import {Compare1Component} from "./compare1/compare1.component";
-import {Notification1Component} from "./notification1/notification1.component";
-import {ResultsComponent} from "./home/results/results.component";
+import {StartTestPage} from "./pages/start-test/start-test-page.component";
+import {QuestionPage} from "./pages/question/question-page.component";
+import {UserAccountPage} from "./pages/user-account/user-account-page.component";
+import {NotificationPage} from "./pages/notification/notification-page.component";
+import {ResultsPage} from "./pages/results/results-page.component";
 import {CommonModule} from "@angular/common";
-import {QuestionColorComponent} from "./home/question-color/question-color.component";
-import {ResultsColorComponent} from "./home/results-color/results-color.component";
+import {QuestionColorPage} from "./pages/question-color/question-color-page.component";
+import {ResultsColorPage} from "./pages/results-color/results-color-page.component";
+import {HomePage} from "./pages/home/home.page";
+import {ComparePage} from "./pages/compare/compare.page";
+import {SigninPage} from "./pages/signin/signin-page.component";
+
 
 const routes: Routes = [
     {
@@ -18,47 +21,51 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+        component:HomePage
     },
     {
         path: 'user-account',
-        component: UserAccount1Component
+        component: UserAccountPage
     },
     {
         path: 'compare',
-        component: Compare1Component
+        component: ComparePage
     },
     {
         path: 'notifications',
-        component: Notification1Component
+        component: NotificationPage
     },
-
     {
         path: "test/:id/start",
-        component: StartTestComponent
+        component: StartTestPage
     },
     {
         path: "test/:id/questions",
-        component: QuestionComponent
+        component: QuestionPage
     },
     {
         path: "test/:id/questions-color",
-        component: QuestionColorComponent
+        component: QuestionColorPage
     },
     {
         path: "test/:id/results-color",
-        component: ResultsColorComponent
+        component: ResultsColorPage
     },
     {
         path: "test/:id/result",
-        component: ResultsComponent
+        component: ResultsPage
     },
+    {
+        path: "sign-in",
+        component: SigninPage
+    }
+
 ];
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules}),
-        CommonModule
+        CommonModule,
+        RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules})
     ],
     exports: [RouterModule]
 })
