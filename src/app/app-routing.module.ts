@@ -11,6 +11,7 @@ import {ResultsColorPage} from "./pages/results-color/results-color-page.compone
 import {HomePage} from "./pages/home/home.page";
 import {ComparePage} from "./pages/compare/compare.page";
 import {SigninPage} from "./pages/signin/signin-page.component";
+import {FrendsComponent} from "./pages/frends/frends.component";
 
 
 const routes: Routes = [
@@ -58,8 +59,11 @@ const routes: Routes = [
     {
         path: "sign-in",
         component: SigninPage
+    },
+    {
+        path: "friends",
+        component: FrendsComponent
     }
-
 ];
 
 @NgModule({

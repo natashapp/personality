@@ -36,6 +36,11 @@ export class AppComponent implements OnInit {
       url: 'notifications',
       icon: 'notifications'
     },
+    {
+      title: 'Friends',
+      url: 'friends',
+      icon: 'people'
+    },
 
   ];
 

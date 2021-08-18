@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://192.168.1.186:8080/PersonalityWeb/",
+  apiUrl: "http://192.168.1.186:8080/PersonalityWeb/rest/",
+  apiFriendUrl : "http://localhost:8080/personalityWeb/rest/friends",
   apiServicesUrl: "http://192.168.1.186:8080/PersonalityWeb/rest/service/",
   apiDownloadUrl: "http://192.168.1.186:8080/PersonalityWeb/tests/",
 };

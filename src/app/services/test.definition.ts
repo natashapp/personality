@@ -44,7 +44,9 @@ export type TestShort = {
     version: number
 }
 
-
+export enum  FriendStatus{
+    Request="Request",Friends="Friends",Reject="Reject"
+}
 export class PUser {
     id: number;
     nickName: string;
@@ -61,6 +63,7 @@ export class PUser {
     iconStyle: string;
     saved: Object[]; //not sure yet of the structure //todo replace Object with something meaningfull
     products: Object[]//
+    status:FriendStatus
 
     public createUser(databaseUser:PUser, updateUser:PUser){
         this.fillUser(databaseUser);

@@ -2,9 +2,7 @@ import {Injectable} from '@angular/core';
 import {StorageService} from "./storage.service";
 import {PUser, TestShort} from "./test.definition";
 import {HttpClient} from '@angular/common/http';
-import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
-import {Observable, throwError} from 'rxjs';
-import {catchError, retry} from 'rxjs/operators';
+
 
 @Injectable({
     providedIn: 'root'
@@ -48,6 +46,11 @@ export class UserService {
             if (user != null) {
                 this.currentUser = user;
             }
+        }
+        if(this.currentUser==null){
+            this.currentUser= new PUser();
+            this.currentUser.id=24;
+            this.currentUser.name= "Natasha Kuzmanoska";
         }
         console.log("getUser() returns this.currentUser=" + this.currentUser)
         return this.currentUser;
@@ -105,6 +108,11 @@ export class UserService {
           //call user exist if null is returned new user if the user is return means that there is a possibility for conflict
       }*/
 
+    setTestUser(user: { nickName: string; name: string; id: number }) {
+        this.currentUser.id= user.id
+        this.currentUser.name = user.name;
+        this.currentUser.nickName = user.nickName;
+    }
 }
 
 

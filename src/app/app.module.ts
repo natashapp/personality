@@ -16,6 +16,7 @@ import {QuestionColorPage} from "./pages/question-color/question-color-page.comp
 import {ResultsColorPage} from "./pages/results-color/results-color-page.component";
 import {SigninPage} from "./pages/signin/signin-page.component";
 import {FormsModule} from "@angular/forms";
+import {FrendsComponent} from "./pages/frends/frends.component";
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import {FormsModule} from "@angular/forms";
         ResultsPage,
         QuestionColorPage,
         ResultsColorPage,
-        SigninPage
+        SigninPage,
+        FrendsComponent
     ],
     entryComponents: [],
     imports: [
